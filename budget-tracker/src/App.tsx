@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import Expenses from "./components/Expenses";
+import type { BudgetData } from "./types";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState<BudgetData | null>(null);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("budget_data");
+    if (saved) {
+      setData(JSON.parse(saved));
+    } else {
+      const initData: BudgetData = {
+        meta: {
+          currency: "USD",
+          version: 1,
+          last_updated: new Date().toISOString(),
+        },
+        people: [
+          {
+            id: "user001",
+            name: "Nathan W.",
+            email: "nathan@example.com",
+            expenses: [],
+          },
+        ],
+      };
+      localStorage.setItem("budget_data", JSON.stringify(initData));
+      setData(initData);
+    }
+  }, []);
+
+  if (!data) return <div>Loading...</div>;
+
+  const user = data.people[0];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-2xl font-bold p-4">Budget Tracker for {user.name}</h1>
+      <Expenses expenses={user.expenses} />
+    </div>
+  );
 }
 
-export default App
+export default App;

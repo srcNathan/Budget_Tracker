@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "currency": "USD",
+    "version": 1,
+    "last_updated": "2025-06-11T17:00:00Z"
+  },
+  "people": [
+    {
+      "id": "3685bea7-002a-4efd-b67f-eb545ce8c518",
+      "name": "Nathan",
+      "email": "testeronies@test.com",
+      "expenses": []
+    }
+  ]
+}
