@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import type { DollarSign } from "../types";
+import type { DollarSign } from "../types/types";
 
 const FloatingDollarBackground: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);

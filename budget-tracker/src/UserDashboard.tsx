@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Expenses from "./components/Expenses";
-import type { BudgetData } from "./types";
+import type { BudgetData } from "./types/types";
 
 function App() {
   const [data, setData] = useState<BudgetData | null>(null);
