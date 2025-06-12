@@ -1,5 +1,5 @@
 import React from "react";
-import type { Expense } from "../types/types";
+import type { Expense } from "../types/BudgetData";
 
 interface Props {
   expenses: Expense[];
