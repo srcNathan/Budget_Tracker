@@ -18,8 +18,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from '@mui/icons-material/Home';
 import "../styles/sideNavbar.css";
 
-
-
 export default function SideNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -29,9 +27,9 @@ export default function SideNav() {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Menu
+    <Box className ="drawer-content" onClick={handleDrawerToggle}>
+      <Typography variant="h6">
+        MENU
       </Typography>
       <List>
         <ListItem onClick={() => navigate("/")}>

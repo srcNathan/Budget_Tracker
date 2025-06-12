@@ -29,9 +29,25 @@
 }
 
 .MuiListItem-root:hover {
-  background-color: #e0e0e0; /* light grey */
+  background-color: lightgreen;
 }
 
 .MuiListItem-root:hover .MuiListItemText-primary {
   color: #333;
+}
+
+.drawer-content {
+  background-color: white;
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.drawer-content .MuiListItemText-primary {
+  font-weight: bold;
+}
+
+.nav-icon {
+  font-size: 5rem;
 }
