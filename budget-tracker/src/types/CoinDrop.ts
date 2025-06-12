@@ -1,4 +1,4 @@
-type CoinDrop = {
+export interface CoinDrop {
   x: number;
   y: number;
   size: number;
