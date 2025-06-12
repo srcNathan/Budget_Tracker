@@ -1,0 +1,37 @@
+.side-nav-container {
+  display: flex;
+}
+
+.appbar {
+  background-color: green !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1201;
+}
+
+.menu-button {
+  margin-right: 16px;
+  color: white;
+}
+
+.drawer-paper {
+  width: 240px;
+  box-sizing: border-box;
+}
+
+.toolbar-title {
+  flex-grow: 1;
+  color: white;
+}
+
+.MuiListItem-root {
+  cursor: pointer;
+}
+
+.MuiListItem-root:hover {
+  background-color: #e0e0e0; /* light grey */
+}
+
+.MuiListItem-root:hover .MuiListItemText-primary {
+  color: #333;
+}

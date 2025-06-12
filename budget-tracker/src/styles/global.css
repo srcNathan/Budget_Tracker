@@ -29,6 +29,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   justify-content: center;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+html {
+  font-family: 'Roboto', sans-serif !important;
 }
 
 h1 {

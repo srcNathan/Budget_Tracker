@@ -33,6 +33,7 @@
   transition: background-color 0.25s, transform 0.2s;
   max-width: 100%;
   box-sizing: border-box;
+  margin-top: 1rem; 
 }
 
 .home-container button:hover {
@@ -79,8 +80,8 @@
   }
 
   .home-container button {
-    padding: 1rem 3rem;
-    font-size: 1rem;
+    padding: 2rem 3rem;
+    font-size: 1rem;    
   }
 
   .home-card {
