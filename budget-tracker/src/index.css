@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,26 +15,28 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #64ff8b;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #53f2c2;
 }
 
 .home-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   text-align: center;
+  margin: 0 auto;
 }
 
-.home-container h1 {
-  font-size: 3rem;
-  font-weight: bold;
+.home-container h1,
+.home-container h2,
+.home-container h4 {
+  margin: 0;
 }
 
 .home-container button {
@@ -70,7 +72,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #64ff8b;
 }
 button:focus,
 button:focus-visible {
@@ -83,7 +85,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #74ff7b;
   }
   button {
     background-color: #f9f9f9;
