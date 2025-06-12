@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Expenses from "./components/Expenses";
 import type { BudgetData } from "./types";
 
