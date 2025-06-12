@@ -23,7 +23,8 @@ a:hover {
 }
 
 .home-container {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 1rem; /* Added padding for small screen breathing room */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +32,7 @@ a:hover {
   gap: 1rem;
   text-align: center;
   margin: 0 auto;
+  box-sizing: border-box; /* include padding in width */
 }
 
 .home-container h1,
@@ -53,6 +55,8 @@ a:hover {
   border: none;
   border-radius: 8px;
   transition: background-color 0.25s, transform 0.2s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .home-container button:hover {
@@ -78,6 +82,40 @@ a:hover {
   transform: skewX(20deg);
   text-align: center;
 }
+
+
+@media (max-width: 600px) {
+  .home-container {
+    padding: 3rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .home-container h1 {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .home-container h2,
+  .home-container h3,
+  .home-container h4 {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .home-container button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+
+  .home-card {
+    padding: .5rem .5rem;
+    width: 95%;
+  }
+}
+
+
+
+
 
 
 body {

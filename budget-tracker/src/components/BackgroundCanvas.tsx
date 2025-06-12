@@ -70,6 +70,10 @@ const FloatingDollarBackground: React.FC = () => {
             canvas!.width = width * window.devicePixelRatio;
             canvas!.height = height * window.devicePixelRatio;
             context!.scale(window.devicePixelRatio, window.devicePixelRatio);
+            context!.textAlign = "center";
+            context!.textBaseline = "middle";
+            context!.fillStyle = "green";
+            context!.font = "24px Arial";
         }
 
         function animate() {
