@@ -32,7 +32,7 @@ const FloatingDollarBackground: React.FC = () => {
 
         let lastDropX = 0;
         let lastDropY = 0;
-        const dropDistanceThreshold = 50;
+        const dropDistanceThreshold = 75;
 
 
         // Initialize dollars with random positions and speeds
